@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App | Add Contact Page</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Contact</h1>
+      <div>
+        <form class="contact-add-form">
+          <div class="divider">
+            <div>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" />
+              <p class="error-input" id="firstname-error"></p>
+            </div>
+
+            <div>
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" />
+              <p class="error-input" id="lastname-error"></p>
+            </div>
+          </div>
+
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" />
+          <p class="error-input" id="address-error"></p>
+
+          <div class="divider">
+            <div>
+              <label for="province">Province</label>
+              <input type="text" id="province" name="province" />
+              <p class="error-input" id="province-error"></p>
+            </div>
+            <div>
+              <label for="country">Postal Code</label>
+              <input type="text" id="postalCode" name="postalCode" />
+              <p class="error-input" id="postalCode-error"></p>
+            </div>
+          </div>
+
+          <div class="divider">
+            <div>
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" id="phoneNumber" name="phoneNumber" />
+              <p class="error-input" id="phoneNumber-error"></p>
+            </div>
+            <div>
+              <label for="Email">Email</label>
+              <input type="text" id="email" name="email" />
+              <p class="error-input" id="email-error"></p>
+            </div>
+          </div>
+
+          <label for="notes">Notes</label>
+          <textarea rows="5" type="text" id="notes" name="notes"></textarea>
+          <p class="error-input" id="notes-error"></p>
+          <p class="error-input"></p>
+
+          <input type="submit" value="Add" />
+        </form>
+
+        <div>
+          <button class="btn"><a href="/">Go Back</a></button>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

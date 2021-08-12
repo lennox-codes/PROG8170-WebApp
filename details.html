@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App | Contact Details</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container details">
+      <h1>Contact Details</h1>
+      <form>
+        <div>
+          <div class="divider">
+            <div>
+              <label for="firstName">First Name</label>
+              <input readonly type="text" id="firstName" name="firstName" />
+            </div>
+
+            <div>
+              <label for="lastName">Last Name</label>
+              <input readonly type="text" id="lastName" name="lastName" />
+            </div>
+          </div>
+
+          <label for="address">Address</label>
+          <input readonly type="text" id="address" name="address" />
+
+          <div class="divider">
+            <div>
+              <span for="province">Province</span>
+              <input readonly type="text" id="province" name="province" />
+            </div>
+            <div>
+              <label for="country">Postal Code</label>
+              <input readonly type="text" id="postalCode" name="postalCode" />
+            </div>
+          </div>
+
+          <div class="divider">
+            <div>
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                readonly
+                type="text"
+                required
+                id="phoneNumber"
+                name="phoneNumber"
+              />
+            </div>
+            <div>
+              <label for="Email">Email</label>
+              <input readonly type="text" id="email" name="email" />
+            </div>
+          </div>
+
+          <label for="notes">Notes</label>
+          <textarea
+            rows="5"
+            readonly
+            type="text"
+            id="notes"
+            name="notes"
+          ></textarea>
+
+          <div class="divider" style="justify-content: space-between">
+            <button class="btn"><a href="/">Go Back</a></button>
+            <button class="btn btn--delete">
+              <a href="/">Delete Contact</a>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
