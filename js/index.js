@@ -35,9 +35,6 @@ const isValidEmail = (email) => {
   return regex.test(email);
 };
 
-const errorFields = document.querySelectorAll("input + .error-input");
-console.log(errorFields);
-
 const isValidForm = () => {
   error = {};
   let errorCount = 0;
