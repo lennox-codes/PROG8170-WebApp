@@ -59,7 +59,7 @@ const isValidForm = () => {
 
   if (isEmpty(lastName.value)) {
     errorCount++;
-    error.lastName = "Last name is required";
+    error.lastName = "Lastname is required";
     document.querySelector(".error-input#lastname-error").innerText =
       error.lastName;
   }
