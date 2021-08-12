@@ -39,7 +39,6 @@ const isValidForm = () => {
   error = {};
   let errorCount = 0;
   const errorFields = document.querySelectorAll(".error-input");
-  errorFields.forEach((field) => (field.innerText = ""));
   const {
     firstName,
     lastName,
@@ -126,17 +125,17 @@ const isValidForm = () => {
       error.phoneNumber;
   }
 
-  //   if (errorCount === 0) return true;
-  //   else {
-  //     removeError();
-  //     return false;
-  //   }
+  if (errorCount === 0) return true;
+  else {
+    removeError();
+    return false;
+  }
 
-  //   function removeError() {
-  //     setTimeout(() => {
-  //       errorFields.forEach((field) => (field.innerText = ""));
-  //     }, 3500);
-  //   }
+  function removeError() {
+    setTimeout(() => {
+      errorFields.forEach((field) => (field.innerText = ""));
+    }, 3500);
+  }
 };
 
 //#endregion
