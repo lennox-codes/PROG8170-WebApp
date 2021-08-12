@@ -12,6 +12,7 @@ if (window.location.pathname === "/details.html") {
   displayContactDetails();
   const deleteBtn = document.querySelector(".btn--delete");
   deleteBtn.addEventListener("click", handleDelete);
+  console.log("yes");
 }
 
 // Validate Fields
