@@ -1,4 +1,4 @@
-// Get contactList from local storage
+// Get contacts list from local storage
 if (!localStorage.getItem("contactList")) {
   localStorage.setItem("contactList", JSON.stringify([]));
 }
@@ -12,7 +12,6 @@ if (window.location.pathname === "/details.html") {
   displayContactDetails();
   const deleteBtn = document.querySelector(".btn--delete");
   deleteBtn.addEventListener("click", handleDelete);
-  console.log("yes");
 }
 
 // Validate Fields
@@ -102,7 +101,6 @@ const isValidForm = () => {
       error.phoneNumber;
   }
 
-  console.log(isEmpty(notes.value));
   if (isEmpty(notes.value)) {
     errorCount++;
     error.notes = "Notes cannot be empty";
@@ -130,8 +128,6 @@ const isValidForm = () => {
       error.phoneNumber;
   }
 
-  console.log(errorCount);
-
   if (errorCount === 0) return true;
   else {
     removeError();
@@ -141,7 +137,7 @@ const isValidForm = () => {
   function removeError() {
     setTimeout(() => {
       errorFields.forEach((field) => (field.innerText = ""));
-    }, 2500);
+    }, 3500);
   }
 };
 
@@ -214,11 +210,11 @@ function handleAdd(e) {
 
     const newList = [newContact, ...contactList];
     localStorage.setItem("contactList", JSON.stringify(newList));
-    //  window.location.replace("/");
+    window.location.replace("/");
   }
 }
 
-//Delete ContactS
+//Delete Contacts
 function handleDelete() {
   const contactList = JSON.parse(localStorage.getItem("contactList"));
   const id = new URLSearchParams(window.location.search).get("id");
@@ -228,7 +224,7 @@ function handleDelete() {
   window.location.replace("/");
 }
 
-// Display fields
+// Display all contacts
 function fillTable() {
   const contactTable = document.querySelector(".contact-list");
 
